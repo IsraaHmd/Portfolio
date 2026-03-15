@@ -1,0 +1,52 @@
+
+/* ─── Global Theme Variables ─────────────────────────────────
+   Single source of truth for all design tokens.
+──────────────────────────────────────────────────────────── */
+
+:root {
+  /* Brand Colors */
+  --color-accent: #be90ef/*#94E0E6*/;        /* Tiffany Blue — change here to retheme */
+  --color-bg: #0a0a0a;
+  --color-text-primary: rgba(255, 255, 255, 0.92);
+  --color-text-muted: rgba(255, 255, 255, 0.7);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-bg-light: #F5E6D3;   
+  --color-secondary-light: #5b360f;     
+  --color-text-primary-light: #0a0a0a;
+  /*   --color-accent: #81d8d0
+  --color-bg: #0a0a0a;
+  --color-text-primary: rgba(255, 255, 255, 0.92);
+  */
+
+  /* Typography */
+  --font-mono: 'Space Mono', monospace;
+  --font-raleway: 'Raleway', sans-serif;
+  --font-heading: 'Nunito', sans-serif;
+  --font-sm: clamp(10px, 1vw, 16px);
+  --font-md: clamp(16px, 1.5vw, 20px);
+  --font-lg: clamp(20px, 1.5vw, 28px);
+  --font-larger: clamp(1.5rem, 3vw, 2.5rem);
+  --font-subtitle: clamp(0.85rem, 1.2vw, 1rem); 
+  /* Spacing */
+  --section-padding-x: 48px;
+
+  /* Circle Button */
+  --circle-btn-size: 160px;
+  --circle-btn-inner-size: 120px;
+  --circle-btn-border: rgba(255, 255, 255, 0.5);
+  --circle-btn-border-hover: rgba(255, 255, 255, 1);
+  --circle-btn-dash: rgba(255, 255, 255, 0.2);
+  --circle-btn-text: rgba(255, 255, 255, 0.85);
+  --circle-btn-dash-hover: rgba(255, 255, 255, 0.35);
+  /* Rectangular Button (mobile) */
+  --pill-btn-border: rgba(255, 255, 255, 0.25);
+  --pill-btn-border-hover: #0a0a0a;
+}
+
+.bg-theme {
+  background-color: var(--color-bg);
+}
+
+.text-theme {
+  color: var(--color-text-primary);
+}

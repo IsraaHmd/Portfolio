@@ -1,0 +1,69 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 48px;
+  background: transparent;
+  z-index: 100;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nav-link {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-size: var(--font-sm);
+  letter-spacing: 0.1em;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.divider-half {
+  width: 28px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: background 0.25s ease;
+}
+
+.divider-half.active {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.nav-logo {
+  color: var(--color-accent);
+  font-size: var(--font-md);
+  letter-spacing: 0.1em;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Scrolled state — black background with accent border */
+.navbar--scrolled {
+  background-color: var(--color-bg);
+  border-bottom: 1.5px solid var(--color-accent);
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}

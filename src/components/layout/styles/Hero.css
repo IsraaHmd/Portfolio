@@ -1,0 +1,109 @@
+/* Hero */
+.video-background {
+  background-color: var(--color-bg);
+}
+
+.hero-right-text {
+  font-size: var(--font-larger); /* smaller than left */
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+}
+.hero-heading {
+  font-family: var(--font-heading);
+  font-size: var(--font-larger);
+  color: var(--color-text-primary);
+}
+ 
+.hero-subtitle {
+  font-family: var(--font-raleway);
+  font-size: var(--font-subtitle);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+/* ─── HeroFallback ───────────────────────────────────────────
+   Shown on the right side of Hero when video fails to load.
+──────────────────────────────────────────────────────────── */
+
+.hero-fallback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 48px;
+  height: 100%;
+}
+
+
+/* "Latest Project" label */
+.hero-fallback__label {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+/* Card — clickable, links to GitHub */
+.hero-fallback__card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 0.3s ease;
+}
+
+.hero-fallback__card:hover {
+  border-color: var(--color-accent);
+}
+
+.hero-fallback__card-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-fallback__card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero-fallback__card-title {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.hero-fallback__card-desc {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Tech tags */
+.hero-fallback__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.hero-fallback__tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 2px 8px;
+  border-radius: 2px;
+  opacity: 0.8;
+}
