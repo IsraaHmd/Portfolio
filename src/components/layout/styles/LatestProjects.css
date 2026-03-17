@@ -1,0 +1,69 @@
+/* ─── LatestProjects ─────────────────────────────────────────── */
+
+.latest-projects {
+  background-color: var(--color-bg);
+  width: 100%;
+}
+
+.latest-projects__header {
+  text-align: center;
+  padding: 0px;
+}
+
+.latest-projects__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-larger);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* Wrapper for slides only — indicator is sticky within this */
+.latest-projects__slides {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Scroll Indicator ───────────────────────────────────────── */
+
+.latest-projects__indicator {
+  position: sticky;
+  top: 50%;
+  left: 0;
+  align-self: flex-start;
+  transform: translateY(-50%);
+  margin-left: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 50;
+}
+
+.indicator__item {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: height 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
+}
+
+.indicator__item--active {
+  height: 32px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 1024px) {
+  .latest-projects__indicator {
+    display: none;
+  }
+
+  .latest-projects__header {
+    padding: 40px 24px 16px;
+  }
+}
