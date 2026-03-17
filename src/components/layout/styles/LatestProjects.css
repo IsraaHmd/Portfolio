@@ -1,0 +1,216 @@
+/* ─── LatestProjects ─────────────────────────────────────────── */
+
+.latest-projects {
+  background-color: var(--color-bg);
+  width: 100%;
+}
+
+.latest-projects__header {
+  text-align: center;
+  padding: 48px var(--section-padding-x) 24px;
+}
+
+.latest-projects__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-larger);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* ─── Desktop pinned layout ──────────────────────────────────── */
+
+.latest-projects__desktop {
+  display: none;
+  position: relative;
+  align-items: center;
+  gap: clamp(40px, 5vw, 80px);
+  padding: 0 clamp(24px, 4vw, var(--section-padding-x)) 48px;
+  height: calc(100vh - 120px);
+}
+
+.latest-projects__images {
+  flex: 0 0 44%;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.latest-projects__image-wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  will-change: transform;
+}
+
+.latest-projects__image {
+  width: 100%;
+  height: clamp(300px, 50vh, 480px);
+  object-fit: contain;
+  display: block;
+}
+
+.latest-projects__texts {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.latest-projects__text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.5vh, 20px);
+  width: 100%;
+  will-change: transform, opacity;
+}
+
+/* ─── Project text styles ────────────────────────────────────── */
+
+.project-tag {
+  font-family: var(--font-mono);
+  font-size: var(--font-sm);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.project-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-larger);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.project-desc {
+  font-family: var(--font-raleway);
+  font-size: var(--font-md);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tech-tag {
+  font-family: var(--font-mono);
+  font-size: var(--font-sm);
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 3px 10px;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.project-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: var(--font-sm);
+  letter-spacing: 0.1em;
+  margin-top: 8px;
+  transition: gap 0.3s ease;
+}
+
+.project-cta:hover { gap: 20px; }
+
+.project-cta__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  font-size: 18px;
+  transition: border-color 0.3s ease;
+}
+
+.project-cta:hover .project-cta__icon {
+  border-color: var(--color-text-primary);
+}
+
+/* ─── Indicator ──────────────────────────────────────────────── */
+
+.latest-projects__indicator {
+  position: absolute;
+  left: clamp(16px, 2vw, 32px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 50;
+}
+
+.indicator__item {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: height 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
+}
+
+.indicator__item--active {
+  height: 32px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* ─── Mobile/Tablet layout — kept exactly as original ────────── */
+
+.latest-projects__slides {
+  display: none;
+  position: relative;
+  flex-direction: column;
+}
+
+.latest-projects__indicator--mobile {
+  position: sticky;
+  top: 50%;
+  left: 0;
+  align-self: flex-start;
+  transform: translateY(-50%);
+  margin-left: 32px;
+  margin-top: 50vh;
+  height: 0;
+}
+
+@media (min-width: 1024px) {
+  .latest-projects__desktop {
+    display: flex;
+  }
+  .latest-projects__slides {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .latest-projects__desktop {
+    display: none;
+  }
+  .latest-projects__slides {
+    display: flex;
+  }
+  .latest-projects__header {
+    padding: 40px 24px 0px;
+  }
+}
