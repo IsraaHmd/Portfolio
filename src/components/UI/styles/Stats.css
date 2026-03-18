@@ -1,0 +1,25 @@
+/* Only theme-dependent styles here */
+
+.stat-item {
+  background: var(--color-nearly-transparent);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: 0 10px 30px var(--color-accent-soft);
+}
+
+.stat-value {
+  color: var(--color-accent);
+  font-family: var(--font-gloock);
+}
+
+.stat-label {
+  color: var(--color-text-muted);
+  font-family: var(--font-normal);
+  letter-spacing: 0.05em;
+}

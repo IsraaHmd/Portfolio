@@ -1,0 +1,17 @@
+.section__header {
+  text-align: center;
+  padding: 0px var(--section-padding-x);
+}
+.section__title {
+  font-family: var(--font-gloock);
+  font-size: var(--font-largest);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+@media (max-width: 1023px) {
+  .section__header {
+    padding: 40px 24px 10px;
+  }
+}

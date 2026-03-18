@@ -5,15 +5,19 @@
 
 :root {
   /* Brand Colors */
-  --color-accent: #be90ef/*#94E0E6*/;        /* Tiffany Blue — change here to retheme */
+  --color-accent: #be90ef;
+  --color-accent-soft: rgba(190, 144, 239, 0.2); /* For subtle highlights and shadows */
   --color-bg: #0a0a0a;
+  --color-dark: #0a0a0a; /*dark color for text and borders on light backgrounds */
   --color-text-primary: rgba(255, 255, 255, 0.92);
   --color-text-muted: rgba(255, 255, 255, 0.7);
-  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border: rgba(255, 255, 255, 0.12);   
+  --color-nearly-transparent: rgba(255, 255, 255, 0.05);
+  /*   
+  --color-accent: #94E0E6;         Tiffany Blue — change here to retheme 
   --color-bg-light: #F5E6D3;   
-  --color-secondary-light: #5b360f;     
-  --color-text-primary-light: #0a0a0a;
-  /*   --color-accent: #81d8d0
+  --color-secondary-light: #5b360f;  
+  --color-accent: #81d8d0
   --color-bg: #0a0a0a;
   --color-text-primary: rgba(255, 255, 255, 0.92);
   */
@@ -21,11 +25,14 @@
   /* Typography */
   --font-mono: 'Space Mono', monospace;
   --font-raleway: 'Raleway', sans-serif;
-  --font-heading: 'Nunito', sans-serif;
+  --font-normal: 'Nunito', sans-serif; /*for heading, messages, or any text */
+  --font-gloock: 'Gloock', serif;
+  --font-inter: 'Inter', sans-serif;
   --font-sm: clamp(10px, 1vw, 16px);
   --font-md: clamp(16px, 1.5vw, 20px);
   --font-lg: clamp(20px, 1.5vw, 28px);
   --font-larger: clamp(1.5rem, 3vw, 2.5rem);
+  --font-largest: clamp(2.5rem, 5vw, 4rem);
   --font-subtitle: clamp(0.85rem, 1.2vw, 1rem); 
   /* Spacing */
   --section-padding-x: 48px;
@@ -41,6 +48,8 @@
   /* Rectangular Button (mobile) */
   --pill-btn-border: rgba(255, 255, 255, 0.25);
   --pill-btn-border-hover: #0a0a0a;
+
+  --padding-buttom-section: 40px;
 }
 
 .bg-theme {

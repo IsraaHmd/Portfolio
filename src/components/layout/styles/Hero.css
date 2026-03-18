@@ -5,11 +5,11 @@
 
 .hero-right-text {
   font-size: var(--font-larger); /* smaller than left */
-  font-family: var(--font-heading);
+  font-family: var(--font-normal);
   color: var(--color-text-primary);
 }
 .hero-heading {
-  font-family: var(--font-heading);
+  font-family: var(--font-normal);
   font-size: var(--font-larger);
   color: var(--color-text-primary);
 }

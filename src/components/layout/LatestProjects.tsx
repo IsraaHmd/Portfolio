@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import "../../styles/theme.css";
 import { PROJECTS } from "./data/latestProjects";
+import SectionHeader from "../UI/SectionHeader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,9 +105,7 @@ export default function LatestProjects() {
     <section className="latest-projects" ref={sectionRef}>
 
       {/* Header */}
-      <div className="latest-projects__header">
-        <h2 className="latest-projects__title">Latest Projects</h2>
-      </div>
+      <SectionHeader text="Latest Projects" />
 
       {/* ── Desktop pinned layout ── */}
       <div className="latest-projects__desktop">

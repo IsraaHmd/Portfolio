@@ -5,18 +5,6 @@
   width: 100%;
 }
 
-.latest-projects__header {
-  text-align: center;
-  padding: 48px var(--section-padding-x) 24px;
-}
-
-.latest-projects__title {
-  font-family: var(--font-heading);
-  font-size: var(--font-larger);
-  font-weight: 600;
-  color: var(--color-text-primary);
-  margin: 0;
-}
 
 /* ─── Desktop pinned layout ──────────────────────────────────── */
 
@@ -25,7 +13,7 @@
   position: relative;
   align-items: center;
   gap: clamp(40px, 5vw, 80px);
-  padding: 0 clamp(24px, 4vw, var(--section-padding-x)) 48px;
+  padding: 0px clamp(24px, 4vw, var(--section-padding-x)) var(--padding-buttom-section);
   height: calc(100vh - 120px);
 }
 
@@ -80,7 +68,7 @@
 }
 
 .project-title {
-  font-family: var(--font-heading);
+  font-family: var(--font-normal);
   font-size: var(--font-larger);
   font-weight: 600;
   color: var(--color-text-primary);
@@ -103,13 +91,13 @@
 }
 
 .project-tech-tag {
-  font-family: var(--font-mono);
+  font-family: var(--font-inter);
   font-size: var(--font-sm);
   letter-spacing: 0.08em;
-  color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-  padding: 3px 10px;
-  border-radius: 2px;
+  color: var(--color-dark);
+  background-color: var(--color-accent);
+  padding: 5px 10px;
+  border-radius: 16px;
   opacity: 0.8;
 }
 
@@ -209,8 +197,5 @@
   }
   .latest-projects__slides {
     display: flex;
-  }
-  .latest-projects__header {
-    padding: 40px 24px 0px;
   }
 }

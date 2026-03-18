@@ -9,7 +9,7 @@
 }
 
 .latest-projects-mobile__title {
-  font-family: var(--font-heading);
+  font-family: var(--font-normal);
   font-size: var(--font-larger);
   font-weight: 600;
   color: var(--color-text-primary);

@@ -1,0 +1,12 @@
+.about-me {
+  background-color: var(--color-bg);
+  width: 100%;
+  padding: 0px clamp(24px, 8vw, 160px) var(--padding-buttom-section);
+}
+
+.about-me-paragraph {
+  font-family: var(--font-normal);
+  font-size: var(--font-larger);
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
