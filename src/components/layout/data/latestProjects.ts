@@ -1,5 +1,6 @@
 import homeproj1 from "../../../assets/homeproj1.png";
 import homeproj2 from "../../../assets/homeproj2.png";
+import homeproj3 from "../../../assets/homeproj3.png";
 export const PROJECTS = [
   {
     id: 1,
@@ -30,7 +31,7 @@ export const PROJECTS = [
       "My personal portfolio — built with React, TypeScript, and Tailwind CSS.",
     techTags: ["React", "TypeScript", "Tailwind CSS", "GSAP"],
     githubLink: "#",
-    image: homeproj1,
+    image: homeproj3,
     imageAlt: "Portfolio 2026",
   },
 ];

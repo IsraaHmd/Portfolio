@@ -1,0 +1,29 @@
+.bullet {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent);
+  border-radius: 1px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.bullet-title {
+  font-family: var(--font-normal);
+  font-size: var(--font-md);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.bullet-desc {
+  font-family: var(--font-raleway);
+  font-size: var(--font-subtitle);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+.bullet-dash {
+  color: var(--color-accent);
+  font-weight: bold;
+  margin-right: 4px;
+}

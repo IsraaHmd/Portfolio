@@ -1,0 +1,106 @@
+/* ─── Contact Wrapper ────────────────────────────────────────── */
+
+.contact-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ─── Contact Section ────────────────────────────────────────── */
+
+.contact-section {
+  background-color: rgb(22, 22, 22);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Overlay — same height as section, slides up to reveal */
+.contact-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-bg);
+  z-index: 2;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* ─── Text & Cards ───────────────────────────────────────────── */
+
+.contact-description {
+  font-family: var(--font-raleway);
+  font-size: var(--font-md);
+  color: var(--color-text-muted);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0;
+}
+
+.contact-link {
+  padding: 1.3rem 1.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  max-width: 380px;
+}
+
+.contact-link:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: 0 15px 40px var(--color-accent-soft);
+  color: var(--color-text-primary);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-pill-bg);
+  border-radius: 50%;
+  border: 1px solid var(--color-pill-border);
+  transition: all 0.3s ease;
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-accent);
+}
+
+.contact-link:hover .contact-icon {
+  background: var(--color-accent-soft);
+  transform: scale(1.1);
+}
+
+.contact-label {
+  font-family: var(--font-mono);
+  font-size: var(--font-constant-sm);
+  color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.contact-value {
+  font-family: var(--font-roboto);
+  font-size: var(--font-constant-md);
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .contact-link {
+    max-width: 100%;
+    width: 100%;
+  }
+}

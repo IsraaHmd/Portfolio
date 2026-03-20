@@ -8,6 +8,7 @@
   --color-accent: #be90ef;
   --color-accent-soft: rgba(190, 144, 239, 0.2); /* For subtle highlights and shadows */
   --color-bg: #0a0a0a;
+  --color-bg-secondary: #0f1316;
   --color-dark: #0a0a0a; /*dark color for text and borders on light backgrounds */
   --color-text-primary: rgba(255, 255, 255, 0.92);
   --color-text-muted: rgba(255, 255, 255, 0.7);
@@ -25,6 +26,7 @@
   /* Typography */
   --font-mono: 'Space Mono', monospace;
   --font-raleway: 'Raleway', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
   --font-normal: 'Nunito', sans-serif; /*for heading, messages, or any text */
   --font-gloock: 'Gloock', serif;
   --font-inter: 'Inter', sans-serif;
@@ -34,6 +36,8 @@
   --font-larger: clamp(1.5rem, 3vw, 2.5rem);
   --font-largest: clamp(2.5rem, 5vw, 4rem);
   --font-subtitle: clamp(0.85rem, 1.2vw, 1rem); 
+  --font-constant-sm: 0.9rem;
+  --font-constant-md:1.1rem;
   /* Spacing */
   --section-padding-x: 48px;
 
@@ -49,7 +53,15 @@
   --pill-btn-border: rgba(255, 255, 255, 0.25);
   --pill-btn-border-hover: #0a0a0a;
 
-  --padding-buttom-section: 40px;
+  --padding-buttom-section: 80px;
+
+  /*Card and its Pill */
+  --color-card-bg: rgba(255, 255, 255, 0.08);
+  --color-pill-bg: rgba(190, 144, 239, 0.2);
+  --color-pill-border: rgba(190, 144, 239, 0.3);
+  --color-text-muted-gray: #8892b0;
+  --border-radius-card: 15px;
+  --border-radius-pill: 20px;
 }
 
 .bg-theme {

@@ -1,0 +1,37 @@
+/* ─── Modal ──────────────────────────────────────────────────── */
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-accent);
+}
+
+.modal__title {
+  font-family: var(--font-normal);
+  font-size: var(--font-lg);
+  color: var(--color-accent);
+  font-weight: 600;
+  margin: 0;
+}
+
+.modal__close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-primary);
+  transition: color 0.2s ease;
+}
+
+.modal__close:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 640px) {
+  .modal__title {
+    font-size: var(--font-md);
+  }
+}

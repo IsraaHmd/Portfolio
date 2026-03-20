@@ -1,0 +1,72 @@
+/* ─── Card ───────────────────────────────────────────────────── */
+
+.card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-card);
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: 0 15px 40px var(--color-accent-soft);
+}
+
+/* ─── Section inside card ────────────────────────────────────── */
+
+.card-section {
+  margin-bottom: 1.5rem;
+}
+
+.card-section:last-child {
+  margin-bottom: 0;
+}
+
+.card-section__title {
+  font-family: var(--font-normal);
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 0.5px;
+}
+
+.card-section__text {
+  font-family: var(--font-normal);
+  font-size: var(--font-subtitle);
+  color: var(--color-text-muted-gray);
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0;
+}
+
+.card-section__highlight {
+  font-family: var(--font-normal);
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0.5rem 0 0 0;
+}
+
+/* ─── Pill ───────────────────────────────────────────────────── */
+
+.card-pill {
+  background: var(--color-pill-bg);
+  color: var(--color-accent);
+  border: 1px solid var(--color-pill-border);
+  border-radius: var(--border-radius-pill);
+  padding: 0.4rem 0.8rem;
+  font-family: var(--font-normal);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.card-pill:hover {
+  background: var(--color-accent-soft);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px var(--color-accent-soft);
+}

@@ -1,0 +1,55 @@
+/* ─── MyExperience ───────────────────────────────────────────── */
+
+.my-experience {
+  background-color: var(--color-bg);
+  padding: 0 clamp(24px, 8vw, 160px) var(--padding-buttom-section);
+}
+
+.experience-subtitle {
+  font-family: var(--font-normal);
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+  text-align: center;
+}
+
+/* Underline — animates left to right on scroll */
+.experience-underline {
+  height: 3px;
+  width: 160px;
+  max-width: 160px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.8s ease;
+}
+
+.experience-underline--animate {
+  transform: scaleX(1);
+}
+/* Bullet — reuse modal style */
+.modal__bullet {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent);
+  border-radius: 1px;
+  display: block;
+}
+
+.experience-item-title {
+  font-family: var(--font-normal);
+  font-size: var(--font-md);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.experience-item-desc {
+  font-family: var(--font-raleway);
+  font-size: var(--font-subtitle);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
