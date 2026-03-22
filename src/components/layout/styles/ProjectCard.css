@@ -1,0 +1,179 @@
+/* ─── Project Card Layout ────────────────────────────────────── */
+
+.project-card-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+  align-items: center;
+}
+
+.project-card-layout--reverse {
+  direction: rtl;
+}
+
+.project-card-layout--reverse > * {
+  direction: ltr;
+}
+
+/* ─── Info Side ──────────────────────────────────────────────── */
+
+.project-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project-card__title {
+  font-family: var(--font-normal);
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.project-card__desc {
+  font-family: var(--font-normal);
+  font-size: var(--font-md);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* ─── Pill ───────────────────────────────────────────────────── */
+
+.project-pill {
+  background: var(--color-pill-bg);
+  color: var(--color-accent);
+  border: 1px solid var(--color-pill-border);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-family: var(--font-raleway);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.project-pill:hover {
+  background: var(--color-accent-soft);
+  transform: scale(1.05);
+}
+
+/* ─── Link Button ────────────────────────────────────────────── */
+
+.project-card__link {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--color-accent);
+  color: var(--color-dark);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-family: var(--font-raleway);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  margin-top: 0.5rem;
+}
+
+.project-card__link::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: rotateGradient 3s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card__link:hover::before {
+  opacity: 1;
+}
+
+.project-card__link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px var(--color-accent-soft);
+}
+
+@keyframes rotateGradient {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ─── Images Side ────────────────────────────────────────────── */
+
+.project-card__images {
+  height: 500px;
+  overflow-y: auto;
+  border-radius: 15px;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.project-card__images::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-card__images::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.project-card__images::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 4px;
+}
+
+.project-card__images::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+.project-card__img {
+  width: 100%;
+  margin: 3px 0;
+  transition: transform 0.3s ease;
+}
+
+.project-card__no-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: var(--font-mono);
+  font-size: var(--font-sm);
+  color: var(--color-text-muted);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .project-card-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .project-card-layout--reverse {
+    direction: ltr;
+  }
+
+  .project-card__images {
+    height: 300px;
+    order:-1;
+  }
+
+  .project-card__title {
+    font-size: var(--font-md);
+  }
+}

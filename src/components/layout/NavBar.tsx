@@ -4,15 +4,17 @@ import "./styles/Navbar.css";
 interface NavLineDividerProps {
   leftLabel: string;
   rightLabel: string;
+  leftLink?: string;
+  rightLink?: string;
 }
 
-function NavLineDivider({ leftLabel, rightLabel }: NavLineDividerProps) {
+function NavLineDivider({ leftLabel, rightLabel, leftLink, rightLink }: NavLineDividerProps) {
   const [hovered, setHovered] = useState<"left" | "right" | null>(null);
 
   return (
     <div className="nav-group">
       <a
-        href={`#${leftLabel.toLowerCase()}`}
+        href={leftLink ?? `#${leftLabel.toLowerCase()}`}
         className="nav-link"
         onMouseEnter={() => setHovered("left")}
         onMouseLeave={() => setHovered(null)}
@@ -26,7 +28,7 @@ function NavLineDivider({ leftLabel, rightLabel }: NavLineDividerProps) {
       </div>
 
       <a
-        href={`#${rightLabel.toLowerCase()}`}
+        href={rightLink ?? `#${rightLabel.toLowerCase()}`}
         className="nav-link"
         onMouseEnter={() => setHovered("right")}
         onMouseLeave={() => setHovered(null)}
@@ -48,9 +50,19 @@ export default function NavBar() {
 
   return (
     <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
-      <NavLineDivider leftLabel="PROJECTS" rightLabel="SKILLS SUMMARY" />
-      <div className="nav-logo">PORTFOLIO</div>
-      <NavLineDivider leftLabel="ABOUT" rightLabel="CONTACT" />
+      <NavLineDivider
+        leftLabel="PROJECTS"
+        leftLink="/projects"
+        rightLabel="SKILLS SUMMARY"
+        rightLink="/skills"
+      />
+      <div className="nav-logo"><a href="/">PORTFOLIO</a></div>
+      <NavLineDivider
+        leftLabel="ABOUT"
+        leftLink="/about"
+        rightLabel="CONTACT"
+        rightLink="/contact"
+      />
     </nav>
   );
 }

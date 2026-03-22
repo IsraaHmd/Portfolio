@@ -5,7 +5,7 @@ import "./styles/About.css";
 
 export default function AboutMe() {
   return (
-    <div className="about-me min-h-screen flex flex-col items-center justify-center text-center py-20">
+    <div id="about" className="about-me scroll-mt-20 min-h-screen flex flex-col items-center justify-center text-center py-20">
       <SectionHeader text="About Me" />
       <p className="about-me-paragraph leading-relaxed max-w-4xl mx-auto mt-8">
         {ABOUT_ME_PARAGRAPH}

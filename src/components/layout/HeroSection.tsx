@@ -28,12 +28,12 @@ export default function Hero() {
       {/* Circle button — desktop*/}
       <div className="hidden lg:flex justify-center items-center
                       lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:z-10">
-        <CircleButton label="MY WORK" to="../../pages/Projects" />
+        <CircleButton label="MY WORK" to="/projects" />
       </div>
 
       {/* Rect button — mobile */}
       <div className="flex lg:hidden justify-center items-center py-6">
-        <RectButton label="MY WORK" to="../../pages/Projects" />
+        <RectButton label="MY WORK" to="/projects" />
       </div>
 
       {/* Right side — video or fallback */}

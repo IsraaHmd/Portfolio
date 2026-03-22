@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseOutline } from "react-icons/io5";
 import "./styles/MobileNavBar.css";
-
-const NAV_LINKS = ["HOME", "PROJECTS", "SKILLS SUMMARY", "ABOUT", "CONTACT"];
+import { NAV_LINKS } from "./data/mobileNavLinks";
 
 export default function MobileNavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -20,6 +21,11 @@ export default function MobileNavBar() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
+  const handleNavClick = (link: string) => {
+    setMenuOpen(false);
+    window.scrollTo(0, 0);
+    navigate(link);
+  };
   return (
     <>
       {/* Top bar */}
@@ -34,7 +40,7 @@ export default function MobileNavBar() {
         </button>
       </nav>
 
-      {/* Fullscreen overlay — always in DOM, slides in/out */}
+      {/* Fullscreen overlay */}
       <div className={`mobile-menu ${menuOpen ? "mobile-menu--open" : ""}`}>
         <div className="mobile-menu__header">
           <span className="nav-logo">PORTFOLIO</span>
@@ -48,15 +54,14 @@ export default function MobileNavBar() {
         </div>
 
         <div className="mobile-menu__links">
-          {NAV_LINKS.map((link) => (
-            <div key={link} className="mobile-menu__item">
-              <a
-                href={`#${link.toLowerCase().replace(" ", "-")}`}
+          {NAV_LINKS.map(({ label, link }) => (
+            <div key={label} className="mobile-menu__item">
+              <button
                 className="mobile-menu__link"
-                onClick={() => setMenuOpen(false)}
+                onClick={() => handleNavClick(link)}
               >
-                {link}
-              </a>
+                {label}
+              </button>
             </div>
           ))}
         </div>

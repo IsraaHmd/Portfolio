@@ -11,7 +11,7 @@ export default function EducationAndSkills() {
           <Card key={i} sections={card.sections} />
         ))}
       </CardGrid>
-
+      <span id="skills"></span>
       <CardGrid title="Technical & Other Skills">
         {SkillsCards.map((card, i) => (
           <Card key={i} sections={card.sections} />

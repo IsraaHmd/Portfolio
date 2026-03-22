@@ -38,7 +38,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <div className="contact-wrapper" ref={sectionRef}>
+    <div id="contact" className="contact-wrapper" ref={sectionRef}>
 
       {/* Contact content underneath */}
       <section className="contact-section w-full px-6 md:px-16 lg:px-40 flex flex-col items-center justify-center gap-12">
