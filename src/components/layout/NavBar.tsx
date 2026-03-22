@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./styles/Navbar.css";
+import "./styles/NavBar.css";
 
 interface NavLineDividerProps {
   leftLabel: string;
