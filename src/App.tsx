@@ -9,7 +9,7 @@ function App() {
   <Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/projects" element={<ProjectsPage/>} />
-    <Route path="/about" element={<HomePage scrollTo="about" />} />
+    <Route path="/experience" element={<HomePage scrollTo="experience" />} />
     <Route path="/skills" element={<HomePage scrollTo="skills" />} />
     <Route path="/contact" element={<HomePage scrollTo="contact" />} />
   </Routes>

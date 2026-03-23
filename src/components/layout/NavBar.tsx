@@ -58,8 +58,8 @@ export default function NavBar() {
       />
       <div className="nav-logo"><a href="/">PORTFOLIO</a></div>
       <NavLineDivider
-        leftLabel="ABOUT"
-        leftLink="/about"
+        leftLabel="EXPERIENCE"
+        leftLink="/experience"
         rightLabel="CONTACT"
         rightLink="/contact"
       />
