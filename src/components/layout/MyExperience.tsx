@@ -34,7 +34,7 @@ export default function MyExperience() {
   }, []);
 
   return (
-    <div className="my-experience w-full">
+    <div id="experience" className="my-experience w-full">
       <SectionHeader text="My Experience" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
