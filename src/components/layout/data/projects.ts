@@ -75,7 +75,7 @@ export const PROJECTS = [
       "ngrok",
     ],
     projectLink: "https://github.com/IsraaHmd/XpertBot_Internship_Project_XpertNurse",
-    images: [XpertNurse],
+    images: XpertNurse,
   },
   {
     title: "University Admission Prediction",
