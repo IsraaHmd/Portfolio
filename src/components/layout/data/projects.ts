@@ -15,6 +15,7 @@ const UniMLProjImages = loadImages(import.meta.glob("../../../assets/UniversityM
 const yoloImages = loadImages(import.meta.glob("../../../assets/YOLOHelmetProject/*.png", { eager: true }));
 const auctionProject = loadImages(import.meta.glob("../../../assets/AuctionProject/*.png", { eager: true }));
 const DLProject = loadImages(import.meta.glob("../../../assets/DLProject/*.png", { eager: true }))
+const XpertNurse = loadImages(import.meta.glob("../../../assets/XpertNurse/*.png", { eager: true }))
 export const PROJECTS = [
   {
     title: "FashionVerse: Web Application",
@@ -55,6 +56,26 @@ export const PROJECTS = [
   ],
     projectLink: "https://github.com/IsraaHmd/Computer-Vision-Hard-Hat-Detection-System-with-YOLOv8",
     images: yoloImages,
+  },
+  {
+    title: "XpertNurse: Machine Learning and Data Science Internship Project (Healthcare)",
+    descriptions: [
+      "A 5-phase healthcare data science internship project that includes data exploration, cleaning and analysis in addition to machine learning models.",
+      "Implemented rule-based, model-based or both approaches for health status classification, patient clustering, doctor recommendation, and vitals anomaly detection, along with an interactive Streamlit dashboard for healthcare insights."
+    ],
+    techTags: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Matplotlib",
+      "Seaborn",
+      "Streamlit",
+      "MySQL",
+      "ngrok",
+    ],
+    projectLink: "https://github.com/IsraaHmd/XpertBot_Internship_Project_XpertNurse",
+    images: [XpertNurse],
   },
   {
     title: "University Admission Prediction",
