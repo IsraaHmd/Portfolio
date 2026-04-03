@@ -21,7 +21,7 @@ export const PROJECTS = [
     title: "FashionVerse: Web Application",
     descriptions: [
       "\"FashionVerse\" is a platform that fashion enthusiasts could enjoy. The concept was to combine several features that those enthusiasts need and look for into one.",
-      "In FashionVerse, you could inspire or be inspired — whether you're a stylist, fashion expert, or simply looking for a decent clothing.",
+      "The platform combines e-commerce, community engagement, AI styling, and admin controls, all designed to enhance the fashion experience for users.",
     ],
     techTags: ["Python", "Django", "MySQL", "Bootstrap", "JavaScript", "HTML", "CSS", "Responsive Design"],
     projectLink: "https://github.com/IsraaHmd/FashionVerse-SeniorProject",
